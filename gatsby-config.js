@@ -63,13 +63,5 @@ module.exports = {
         },
       },
     }, // Needed for dynamic images
-
-    {
-      resolve: `@ccalamos/gatsby-source-googlemaps-static`,
-      options: {
-        key: process.env.GOOGLE_MAPS_STATIC_API_KEY,
-        center: `41.568554, 2.009382`,
-      },
-    },
   ],
 };
