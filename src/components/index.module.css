@@ -1,0 +1,86 @@
+.list {
+  display: grid;
+  margin: 0;
+  /* https://css-tricks.com/responsive-layouts-fewer-media-queries/ */
+  --w: 280px;
+  --n: 2;
+  gap: var(--size-gap);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(max(var(--w), 100%/ (var(--n) + 1) + 0.1%), 1fr)
+  );
+  margin-bottom: var(--size-gap);
+  margin-top: var(--size-gap);
+}
+
+.listItem {
+  margin: 0;
+}
+
+.listItem::marker {
+  color: #e95800;
+}
+
+.listItem:nth-child(2)::marker {
+  color: #159bf3;
+}
+
+.listItem:nth-child(3)::marker {
+  color: #8eb814;
+}
+
+.listItem:nth-child(4)::marker {
+  color: #663399;
+}
+
+.listItemLink {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.listItemDescription {
+  color: var(--color-text);
+  margin-bottom: 0;
+  margin-top: var(--space-1);
+}
+
+.intro {
+  max-width: none;
+  line-height: var(--line-height-loose);
+}
+
+.firstDiv {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.firstDiv h1 {
+  color: #3c4856c2;
+  font-family: "Poppins";
+  font-weight: 400;
+  text-align: center;
+}
+.firstDiv h2 {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.firstDiv p {
+  text-align: center;
+}
+
+.secondDiv {
+  text-align: left;
+}
+
+.serviceStyle {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serviceStyle h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
