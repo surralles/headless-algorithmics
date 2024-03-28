@@ -4,7 +4,6 @@ import {
   Wrapper,
   LinksFooter,
   FirstColumn,
-  StyledImg,
   Adress,
 } from './Footer.styles';
 import MailIcon from '@mui/icons-material/Mail';
@@ -16,8 +15,6 @@ import { styled } from '@mui/material/styles';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { getImage } from 'gatsby-plugin-image';
-import { useMapQuery } from '../../hooks/useMapQuery';
 
 const Footer = () => {
   const ColorButton = styled(Button)(({ theme }) => ({
@@ -63,11 +60,6 @@ const Footer = () => {
       description: 'Personalización del diseño web y el branding de la marca',
     },
   ];
-
-  const data = useMapQuery();
-  console.log(data);
-
-  const imageData = getImage(data.staticMap.childFile);
 
   return (
     <>
@@ -130,14 +122,7 @@ const Footer = () => {
                 Barcelona
               </p>
             </Adress>
-            <div>
-              <a href='https://maps.app.goo.gl/paiCkhBq1i269KpZ8'>
-                <StyledImg
-                  image={imageData}
-                  alt='Localizacion en Terrassa de Algorithmics Terrassa'
-                />
-              </a>
-            </div>
+            <div></div>
           </FooterWrapper>
         </Wrapper>
       </ThemeProvider>
