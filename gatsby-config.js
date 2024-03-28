@@ -1,6 +1,10 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 module.exports = {
   siteMetadata: {
     title: `Algorithmics Headless Weby`,
@@ -29,7 +33,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `https://wprojects.algorithmicsterrassa.com/graphql`,
+        url: `http://wp-headless-project.local/graphql`,
       },
     },
     `gatsby-plugin-image`,
@@ -63,7 +67,7 @@ module.exports = {
     {
       resolve: `@ccalamos/gatsby-source-googlemaps-static`,
       options: {
-        key: `AIzaSyBEKS2fj1nAFH3FnRBVvA9Zf7_OFKBQ4wM`,
+        key: process.env.GOOGLE_MAPS_STATIC_API_KEY,
         center: `41.568554, 2.009382`,
       },
     },
