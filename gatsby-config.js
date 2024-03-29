@@ -47,7 +47,7 @@ module.exports = {
 
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-emotion`,
+
     `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-plugin-google-fonts-with-attributes`,
